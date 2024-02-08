@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import MaxWidthWrapper from '@/components/layout/MaxWidthWrapper'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { ArrowDownToLine, CheckCircle, Leaf } from '@/components/ui/icon'
 
@@ -35,8 +35,8 @@ export default function Home() {
             <span className="text-blue-600">digital assets</span>.
           </h1>
           <p className="mt-6 max-w-prose text-lg text-muted-foreground">
-            Welcome to DigitalHippo. Every asset on our platform is verifed by our team to
-            ensure our highest quality standards.
+            Welcome to DigitalHippo. Every asset on our platform is verifed by
+            our team to ensure our highest quality standards.
           </p>
           <div className="mt-6 flex flex-col gap-4 sm:flex-row">
             <Link href="/products" className={buttonVariants()}>
@@ -61,9 +61,13 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
-                  <h3 className="text-base font-medium text-gray-900">{perk.name}</h3>
+                  <h3 className="text-base font-medium text-gray-900">
+                    {perk.name}
+                  </h3>
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground">{perk.description}</p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  {perk.description}
+                </p>
               </div>
             ))}
           </div>
