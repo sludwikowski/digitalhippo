@@ -43,7 +43,7 @@ const Page = () => {
               className: 'gap-1.5',
             })}>
             Alredy have an account? Sign-in
-            <ArrowRight className="size-4" />
+            <ArrowRight className="size-5" />
           </Link>
         </div>
 

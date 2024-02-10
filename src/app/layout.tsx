@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Navbar from '@/components/layout/Navbar/Navbar'
+import Providers from '@/components/providers'
 import { cn } from '@/lib/utils/cn'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,8 +27,10 @@ export default function RootLayout({
           inter.className
         )}>
         <main className="relative flex min-h-screen flex-col">
-          <Navbar />
-          <div className="flex-1 grow">{children}</div>
+          <Providers>
+            <Navbar />
+            <div className="flex-1 grow">{children}</div>
+          </Providers>
         </main>
       </body>
     </html>
