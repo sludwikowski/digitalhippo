@@ -1,10 +1,10 @@
+import '../styles/globals.css'
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { cn } from '@/lib/utils/cn'
 import Navbar from '@/components/layout/Navbar/Navbar'
-
-import '../styles/globals.css'
+import { cn } from '@/lib/utils/cn'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +27,7 @@ export default function RootLayout({
         )}>
         <main className="relative flex min-h-screen flex-col">
           <Navbar />
-          <div className="flex-1 flex-grow">{children}</div>
+          <div className="flex-1 grow">{children}</div>
         </main>
       </body>
     </html>

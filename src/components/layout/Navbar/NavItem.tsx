@@ -1,12 +1,12 @@
 'use client'
-import Link from 'next/link'
-import Image from 'next/image'
 
-import type { INavItemProps } from '@/types/INavItemProps'
-import { cn } from '@/lib/utils/cn'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 import { ChevronDown } from '@/components/ui/icon'
+import { cn } from '@/lib/utils/cn'
+import type { INavItemProps } from '@/types/INavItemProps'
 
 const NavItem = ({
   isAnyOpen,
@@ -44,7 +44,9 @@ const NavItem = ({
               <div className="grid grid-cols-4 gap-x-8 gap-y-10 py-16">
                 <div className="col-span-4 col-start-1 grid grid-cols-3 gap-x-8">
                   {category.featured.map(item => (
+                    // eslint-disable-next-line
                     <div
+                      // eslint-disable-next-line
                       onClick={() => close}
                       key={item.name}
                       className="group relative text-base sm:text-sm">

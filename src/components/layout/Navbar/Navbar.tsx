@@ -1,9 +1,11 @@
-import MaxWidthWrapper from '../MaxWidthWrapper'
 import Link from 'next/link'
-import { Icons } from '../../ui/Icons'
-import NavItems from './NavItems'
+
 import { buttonVariants } from '@/components/ui/button'
+
+import { Icons } from '../../ui/Icons'
+import MaxWidthWrapper from '../MaxWidthWrapper'
 import Cart from './Cart'
+import NavItems from './NavItems'
 
 const Navbar = () => {
   const user = null
@@ -18,7 +20,7 @@ const Navbar = () => {
 
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/" className="">
-                  <Icons.logo className="h-10 w-10" />
+                  <Icons.logo className="size-10" />
                 </Link>
               </div>
 
@@ -63,7 +65,7 @@ const Navbar = () => {
                     </div>
                   )}
 
-                  <div className="lg:mk-6 ml-4 flow-root">
+                  <div className="ml-4 flow-root lg:ml-6">
                     <Cart />
                   </div>
                 </div>
