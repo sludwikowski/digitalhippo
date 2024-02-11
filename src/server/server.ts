@@ -1,8 +1,7 @@
 import * as trpcExpress from '@trpc/server/adapters/express'
 import express from 'express'
 
-import { appRouter } from '@/trpc'
-
+import { appRouter } from '../trpc'
 import { getPayloadClient } from './getPayload'
 import { nextApp, nextHandler } from './next-utils'
 

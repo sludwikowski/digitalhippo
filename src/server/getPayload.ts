@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import path from 'path'
-import payload from 'payload'
+import payload, { type Payload } from 'payload'
 import type { InitOptions } from 'payload/config'
 
 dotenv.config({
@@ -21,7 +21,9 @@ interface IArgs {
   initOptions?: Partial<InitOptions>
 }
 
-export const getPayloadClient = async ({ initOptions }: IArgs = {}) => {
+export const getPayloadClient = async ({
+  initOptions,
+}: IArgs = {}): Promise<Payload> => {
   if (!process.env.PAYLOAD_SECRET) {
     throw new Error('PAYLOAD_SECRET is not defined')
   }
