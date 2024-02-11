@@ -57,7 +57,6 @@ export const authRouter = router({
     .input(AuthCredentialsValidator)
     .mutation(async ({ input, ctx }) => {
       const { email, password } = input
-      // eslint-disable-next-line
       // @ts-ignore
       const { res } = ctx
 
